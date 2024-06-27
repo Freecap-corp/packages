@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewParent;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebSettings
 import android.webkit.WebViewClient;
 import androidx.annotation.ChecksSdkIntAtLeast;
 import androidx.annotation.NonNull;
