@@ -236,6 +236,10 @@ public class WebViewHostApiImpl implements WebViewHostApi {
 
     final WebView webView = webViewProxy.createWebView(context, binaryMessenger, instanceManager);
 
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
+    }
+    
     displayListenerProxy.onPostWebViewInitialization(displayManager);
     instanceManager.addDartCreatedInstance(webView, instanceId);
   }
